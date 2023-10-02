@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Josefin+Sans:wght@300&display=swap');
+:root{
+    --fonte:font-family: 'Josefin Sans', sans-serif;
+    --bg-image: url('temalight.jpg');
+    --cor1: rgb(229, 229, 229);
+    --cor2: rgb(81, 81, 81);
+    --corhover: rgb(240, 204, 0);
+}
+.dark-mode:root{
+    --bg-image: url('temadark.jpg');
+    --cor1: rgb(56, 56, 56);
+    --cor2: rgb(211, 211, 211);
+    --corhover: rgb(48, 255, 48);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: var(--bg-image);
+    background-size: cover;
+    margin-right: 500px;
+}
+.teste{
+    width: 420px;
+    border-radius: 10px;
+    color: var(--cor2);
+    padding: 25px 20px;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    border: solid 1px rgb(255, 255, 255);
+}
+.teste h1{
+    font-family: var(--fonte);
+    text-align: center;
+    font-size: 2.25rem;
+}
+.teste .caixa{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.caixa input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    border: 2px solid rgb(240, 240, 240);
+    border-radius: 50px;
+    font-size: 1.125rem;
+    font-family: var(--fonte);
+    color: rgb(255, 255, 255);
+    padding: 20px 45px 20px 20px;
+    box-shadow: 0 0 5px rgb(60, 60, 60);
+}
+.caixa input::placeholder{
+    color: var(--cor2);
+    font-family: var(--fonte);
+}
+.caixa i  {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+}
+.teste .lembrarLogin{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.938rem;
+    font-family: var(--fonte);
+    color: white;
+    margin: -15px 0 15px;
+}
+.lembrarLogin label input{
+    accent-color:rgb(253, 253, 253);
+    margin-right: 3px;
+}
+.lembrarLogin a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 0.938rem;
+    font-family: var(--fonte);
+    padding-right: 3px;
+}
+.lembrarLogin a:hover{
+    text-decoration: underline;
+}
+.teste .butao{
+    width: 100%;
+    height: 45px;
+    background: var(--cor1);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.125rem;
+    color: var(--cor2);
+    font-weight: 600; 
+}
+.novoLogin  {
+font-size: 1.25rem;
+font-weight: 400;
+color: rgb(255, 255, 255);
+text-align: center;
+padding: 12px 0 7px 0;
+}
+.novoLogin a{
+    text-decoration: none;
+    color: var(--corhover)
+}
+.novoLogin a:hover{
+    text-decoration: underline;
+}
+.cabe{
+    padding-bottom: 700px;
+    padding-right: 400px;
+}
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+.label{
+    background: rgb(0, 0, 0);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.3);
+}
+.label .ball{
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 23px;
+    width: 23px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+.fa-moon{
+    color: rgb(1, 164, 197);
+}
+.fa-sun{
+    color: rgb(215, 235, 0);
+}
+@media (max-width: 768px) {
+    body {
+      margin-right: 0;
+    }
+    .teste {
+      width: 100%;
+      margin: 0;
+    }
+    .cabe {
+      padding-bottom: 20px;
+      padding-right: 0;
+      font-size: 16px;
+    }
+  }
+  @media (min-width: 769px) {
+    body {
+      margin-right: 500px;
+    }
+    .cabe {
+      padding-bottom: 700px;
+      padding-right: 400px;
+      font-size: 20px;
+    }
+  }
